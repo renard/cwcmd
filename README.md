@@ -1,6 +1,10 @@
 cwcmd
 =====
 
+
+[![GoDoc](https://godoc.org/github.com/renard/cwcmd?status.svg)](https://godoc.org/github.com/renard/cwcmd)
+
+
 cwcmd is a simple wrapper around go-cmd/cmd package. Its main purpose is
 to simplify its usage (if this is possible) and add a generic purpose
 hook.
