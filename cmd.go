@@ -1,7 +1,7 @@
 // Copyright © 2020 Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 //
 // Created: 2020-02-28
-// Last changed: 2020-02-28 00:17:32
+// Last changed: 2020-02-28 00:44:14
 //
 // This program is free software. It comes without any warranty, to
 // the extent permitted by applicable law. You can redistribute it
@@ -9,9 +9,9 @@
 // To Public License, Version 2, as published by Sam Hocevar. See
 // http://sam.zoy.org/wtfpl/COPYING for more details.
 
-// cwcmd is a simple wrapper around go-cmd/cmd package. Its main purpose is
-// to simplify its usage (if this is possible) and add a generic purpose
-// hook.
+// Package cwcmd is a simple wrapper around go-cmd/cmd package. Its main
+// purpose is to simplify its usage (if this is possible) and add a generic
+// purpose hook.
 //
 // The typical usage of this hook is to perform all logging operations and
 // stream the command output to the terminal.
@@ -67,8 +67,8 @@ import (
 
 // Global structure wrapping cmd.Cmd struct.
 type Cmd struct {
-	// See cmd.Cmd documentation for this one. All cmd.Cmd methods are
-	// accessible from here.
+	// Cmd is the cmd.Cmd struct. See its documentation for this one. All
+	// cmd.Cmd methods are accessible from here.
 	*cmd.Cmd
 	// A Hook struct added by AddHook.
 	hook *Hook
@@ -76,8 +76,8 @@ type Cmd struct {
 	chanCmd <-chan cmd.Status
 }
 
-// Contols the cmd.Cmd behaviour. This is a convenient struct preventing
-// from importing github.com/go-cmd/cmd all the time.
+// Option contols the cmd.Cmd behaviour. This is a convenient struct
+// preventing from importing github.com/go-cmd/cmd all the time.
 //
 // See cmd.Options documentation.
 type Options struct {
@@ -111,6 +111,8 @@ func New(o *Options, command string, args ...string) (c *Cmd) {
 	return c
 }
 
+// AddHook add a new Hook to Cmd. When Cmd is started the function f is run
+// a a gorouting.
 func (c *Cmd) AddHook(f hookFunc) {
 	c.hook = c.newHook(f)
 }
@@ -128,9 +130,9 @@ func (c *Cmd) Wait() (int, error) {
 	return c.Cmd.Status().Exit, c.Cmd.Status().Error
 }
 
-// Wait until the command has started. Use this method to run a process in
-// backgound. If main programm exit too fast, command may not have been
-// started.
+// WaitStarted waits until the command has started. Use this method to run a
+// process in backgound. If main programm exit too fast, command may not
+// have been started.
 //
 // In most of case both buffered and streaming option should be disabled for
 // this functionnality to work.
