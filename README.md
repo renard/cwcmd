@@ -2,7 +2,8 @@ cwcmd
 =====
 
 
-[![GoDoc](https://godoc.org/github.com/renard/cwcmd?status.svg)](https://godoc.org/github.com/renard/cwcmd)
+[![Go Report Card][goreport-img]][goreport-url]
+[![GoDoc][godoc-img]][godoc-url]
 
 
 cwcmd is a simple wrapper around go-cmd/cmd package. Its main purpose is
@@ -66,3 +67,9 @@ permitted by applicable law. You can redistribute it and/or modify it under
 the terms of the Do What The Fuck You Want To Public License, Version 2, as
 published by Sam Hocevar. See http://sam.zoy.org/wtfpl/COPYING for more
 details.
+
+
+[goreport-img]: https://goreportcard.com/badge/github.com/renard/cwcmd
+[goreport-url]: https://goreportcard.com/report/github.com/renard/cwcmd
+[godoc-img]: https://godoc.org/github.com/renard/cwcmd?status.svg
+[godoc-url]: https://godoc.org/github.com/renard/cwcmd
