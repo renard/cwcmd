@@ -1,7 +1,7 @@
 // Copyright © 2020 Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 //
 // Created: 2020-02-28
-// Last changed: 2020-02-28 00:44:14
+// Last changed: 2020-02-28 00:50:03
 //
 // This program is free software. It comes without any warranty, to
 // the extent permitted by applicable law. You can redistribute it
@@ -65,7 +65,7 @@ import (
 	"github.com/go-cmd/cmd"
 )
 
-// Global structure wrapping cmd.Cmd struct.
+// Cmd is the global structure wrapping cmd.Cmd struct.
 type Cmd struct {
 	// Cmd is the cmd.Cmd struct. See its documentation for this one. All
 	// cmd.Cmd methods are accessible from here.
@@ -76,7 +76,7 @@ type Cmd struct {
 	chanCmd <-chan cmd.Status
 }
 
-// Option contols the cmd.Cmd behaviour. This is a convenient struct
+// Options controls the cmd.Cmd behavior. This is a convenient struct
 // preventing from importing github.com/go-cmd/cmd all the time.
 //
 // See cmd.Options documentation.
