@@ -24,6 +24,10 @@ func TestCmd(t *testing.T) {
 		t.Error(err)
 	}
 
+	if err := c.WaitStarted(); err != nil {
+		t.Error(err)
+	}
+
 	i, err := c.Wait()
 	if err != nil {
 		t.Error(err)
