@@ -6,11 +6,11 @@ cwcmd
 [![Build status][build-img]][build-url]
 [![Coverage report][cover-img]][cover-url]
 [![GoDoc][godoc-img]][godoc-url]
+[![License: WTFPL][license-img]][license-url]
 
-
-cwcmd is a simple wrapper around go-cmd/cmd package. Its main purpose is
-to simplify its usage (if this is possible) and add a generic purpose
-hook.
+cwcmd is a simple wrapper around
+[go-cmd/cmd](https://github.com/go-cmd/cmd/) package. Its main purpose is to
+simplify its usage (if this is possible) and add a generic purpose hook.
 
 The typical usage of this hook is to perform all logging operations and
 stream the command output to the terminal.
@@ -79,3 +79,5 @@ details.
 [cover-url]: https://coveralls.io/github/renard/cwcmd
 [godoc-img]: https://godoc.org/github.com/renard/cwcmd?status.svg
 [godoc-url]: https://godoc.org/github.com/renard/cwcmd
+[license-img]: https://img.shields.io/badge/License-WTFPL-brightgreen.svg
+[license-url]: http://www.wtfpl.net/about/
