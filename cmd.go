@@ -1,7 +1,7 @@
 // Copyright © 2020 Sébastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>
 //
 // Created: 2020-02-28
-// Last changed: 2020-02-28 00:50:03
+// Last changed: 2020-02-28 02:45:23
 //
 // This program is free software. It comes without any warranty, to
 // the extent permitted by applicable law. You can redistribute it
@@ -100,7 +100,7 @@ type Hook struct {
 	f    hookFunc
 }
 
-// New returns an Cmd struct read to run command and its optional args.
+// New returns an Cmd struct ready to run command and its optional args.
 // Use Options to capture output.
 func New(o *Options, command string, args ...string) (c *Cmd) {
 	c = &Cmd{}
@@ -112,7 +112,7 @@ func New(o *Options, command string, args ...string) (c *Cmd) {
 }
 
 // AddHook add a new Hook to Cmd. When Cmd is started the function f is run
-// a a gorouting.
+// as a gorouting.
 func (c *Cmd) AddHook(f hookFunc) {
 	c.hook = c.newHook(f)
 }
@@ -135,7 +135,8 @@ func (c *Cmd) Wait() (int, error) {
 // have been started.
 //
 // In most of case both buffered and streaming option should be disabled for
-// this functionnality to work.
+// this functionnality to work. Note that main program should also exit in a
+// clean way.
 //
 // The Cmd.Status().Error is returned for error checking.
 func (c *Cmd) WaitStarted() error {
