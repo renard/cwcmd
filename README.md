@@ -3,6 +3,8 @@ cwcmd
 
 
 [![Go Report Card][goreport-img]][goreport-url]
+[![Build status][build-img]][build-url]
+[![Coverage report][cover-img]][cover-url]
 [![GoDoc][godoc-img]][godoc-url]
 
 
@@ -71,5 +73,9 @@ details.
 
 [goreport-img]: https://goreportcard.com/badge/github.com/renard/cwcmd
 [goreport-url]: https://goreportcard.com/report/github.com/renard/cwcmd
+[build-img]: https://travis-ci.org/renard/cwcmd.svg?branch=master
+[build-url]: https://travis-ci.org/renard/cwcmd
+[cover-img]: https://coveralls.io/repos/github/renard/cwcmd/badge.svg
+[cover-url]: https://coveralls.io/github/renard/cwcmd
 [godoc-img]: https://godoc.org/github.com/renard/cwcmd?status.svg
 [godoc-url]: https://godoc.org/github.com/renard/cwcmd
